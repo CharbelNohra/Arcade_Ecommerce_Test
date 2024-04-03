@@ -45,7 +45,7 @@ body {
     align-items: center;
     padding: 10px 20px;
     position: fixed;
-    width: 98%; 
+    width: 98%;
     top: 0;
 }
 
@@ -104,59 +104,57 @@ body {
     src: url('../fonts/Permanent_Marker/PermanentMarker-Regular.ttf');
 }
 
+.history,
+.community,
+.mission {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .history-content,
 .mission-content,
 .community-content {
-    float: right;
     margin: 0 50px 50px 0;
-    height: 100%;
+    height: min-content;
+    width: 40%;
     z-index: -1;
     background-color: #fff;
-    border-radius: 30px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.35);
     position: relative;
     overflow: hidden;
     padding: 20px;
-    width: 35%;
     font-family: Arial, Helvetica, sans-serif;
     vertical-align: baseline;
-    display: inline;
 }
 
 .history img,
 .community img,
 .mission img {
-    float: left;
-    height: 320px;
-    width: 40%;
+    height: 350px;
     border-radius: 20px;
     margin: 0 50px 50px 0;
     display: inline;
 }
 
-@media (max-width: 600px) {
-    .history-content,
-    .community-content,
-    .mission-content {
-        display: block;
-        text-align: justify;
-        margin-bottom: 30px;
-        margin-left: 50px;
-        width: 100%;
-        object-fit: cover;
-    }
-    .history img,
-    .community img,
-    .community img {
-        margin-bottom: 10px;
-        width: 100%;
-        display: block;
-        object-fit: cover;
+.community img {
+    width: 50%;
+}
+
+@media (max-width: 1200px) {
+
+    .history,
+    .community,
+    .mission {
+        flex-direction: column;
     }
 
-    /* .community img {
-        width: 70%;
-    } */
+    .footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .footer {
@@ -164,11 +162,15 @@ body {
     border-top: 2px solid black;
     padding: 20px;
     display: flex;
-    width: 98%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .ft {
-    width: 30%
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .ft img {
@@ -236,9 +238,9 @@ body {
     border: 1px solid black;
 }
 
-.email, 
+.email,
 .subject,
-#comments, 
+#comments,
 :focus {
     outline: none;
 }
